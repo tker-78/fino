@@ -1,15 +1,17 @@
 Rails.application.routes.draw do
-  root 'staticpages#top'
-  get 'staticpages/top', to: 'staticpages#top'
-  get 'staticpages/about', to: 'staticpages#about'
-  get 'staticpages/contact', to: 'staticpages#contact'
+  devise_for :users
+  devise_scope :user do
+    root 'staticpages#top'
+  end
+  
+  resources :staticpages
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 
   # Defines the root path route ("/")
   # root "articles#index"
-  Rails.application.routes.draw do
-    devise_for :users, controllers: {
-      sessions: 'users/sessions'
-    }
-  end
+  # Rails.application.routes.draw do
+  #   devise_for :users, controllers: {
+  #     sessions: 'users/sessions'
+  #   }
+  # end
 end
