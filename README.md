@@ -10,11 +10,13 @@
 ## 構成(使うgemなど)
 - rails 7.0.2.3
 - ruby 2.7.4
+- devise
 - line-bot-sdk-ruby
 - chartkick
 - aws
 - groupdate
 - rspec-rails
 - bootstrap
+
 
 
