@@ -1,0 +1,61 @@
+
+/* header */
+
+i {
+  margin-right: 10px;
+  font-size: 3rem;
+}
+
+.navbar-brand {
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+
+/* footer */
+
+.footer {
+  margin-top: 60px;
+  border-top: solid 1px grey;
+}
+
+
+
+/* top */
+
+.main {
+  margin: 20px auto;
+  background-color: lightsteelblue;
+  border-radius: 1rem;
+}
+
+.center {
+  text-align: center;
+}
+
+.main h1 {
+  padding: 60px 0px; 
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.main p {
+  padding: 30px 0px;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 2rem;
+}
+
+.btn-signup {
+  font-size: 2rem;
+  background-color: #0bd;
+}
+
+.btn-login {
+  font-size: 2rem;
+  background-color: greenyellow;
+  color: grey;
+}
+
+.forget-password {
+  margin-top: 40px;
+}

@@ -1,25 +1,20 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+## このアプリに求める機能
+- LINEに特定のワードを入れると、現在の総資産、今月の支出、収入など、家計情報を教えてくれる
+- グラフを要求すれば、グラフの画像ファイルまたはリンク先を教えてくれる
+- 銀行口座の情報にアクセスできる
+- クレジットカードの利用情報にアクセスできる
+- 収入の変化、家などの資産の購入、教育費用など、条件の変化に対応してシミュレーションができる
 
-Things you may want to cover:
+## 構成(使うgemなど)
+- rails 7.0.2.3
+- ruby 2.7.4
+- line-bot-sdk-ruby
+- chartkick
+- aws
+- groupdate
+- rspec-rails
+- bootstrap
 
-* Ruby version
 
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-# fino
