@@ -72,3 +72,30 @@ i {
   background: rgb(172, 83, 138);
   border-radius: 5px;
 }
+
+
+/* fixed_expense */
+
+.expense {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.f-container {
+  background: #0bd;
+}
+
+
+.css-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 300px 300px 300px 300px 300px;
+  gap: 3px;
+  .grid-container {
+    background-color: #0bd;
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+  }
+}
