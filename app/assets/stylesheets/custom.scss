@@ -89,13 +89,43 @@ i {
 
 .css-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: 300px 300px 300px 300px 300px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px;
   gap: 3px;
+  margin-bottom: 20px;
   .grid-container {
-    background-color: #0bd;
     padding: 10px;
     text-align: center;
     font-size: 2rem;
+    border-radius: 10px;
+    border: 2px solid gray;
   }
+}
+
+.css-grid-month {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 200px 200px 200px 200px;
+  gap: 5px;
+  margin-bottom: 60px;
+  .grid-container {
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    justify-content: center;
+    border-radius: 10px;
+    border: 2px solid gray;
+
+    p {
+      font-size: 4rem;
+      margin-top: 60px;
+    }
+  }
+}
+
+.btn-submit_expense {
+  font-size: 3rem;
+  color: white;
+  background-color: #0bd;
+  border: 2px solid darkblue;
 }

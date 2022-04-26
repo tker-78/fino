@@ -1,0 +1,110 @@
+<div class="container">
+  <h1>固定費一覧</h1>
+
+  <h2>2022</h2>
+  <div class="css-grid-month">
+    <div class="grid-container">
+    <% if @fixed_expense.nil? %>
+      <p><%= link_to "1月", new_fixed_expense_path %></p>
+    <% else %>
+      <p><%= link_to "1月", edit_fixed_expense_path(@fixed_expense) %></p>
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+      <p>2月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>3月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>4月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>5月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>6月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>7月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>8月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>9月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>10月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>11月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>12月</p>
+    </div>
+  </div>
+
+  <h2>2021</h2>
+  <div class="css-grid-month">
+    <div class="grid-container">
+      <p>1月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>2月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>3月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>4月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>5月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>6月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>7月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>8月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>9月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>10月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>11月</p>
+    </div>
+
+    <div class="grid-container">
+      <p>12月</p>
+    </div>
+  </div>
+
+</div>
