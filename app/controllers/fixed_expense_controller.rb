@@ -17,10 +17,10 @@ class FixedExpenseController < ApplicationController
   def create
     @fixed_expense = FixedExpense.new(fixed_expense_params)
     if @fixed_expense.save
-      flash[:info] = "Successfully add data"
+      flash[:notice] = "Successfully add data"
       redirect_to root_path 
     else
-      flash[:danger] = "Something wrong"
+      flash[:alert] = "Something wrong"
       redirect_to root_path
     end
   end
@@ -33,10 +33,10 @@ class FixedExpenseController < ApplicationController
     @fixed_expense = FixedExpense.find_by(id: params[:id])
 
     if @fixed_expense.update(fixed_expense_params)
-      flash[:success] = "Successfully updated."
+      flash[:notice] = "Successfully updated."
       redirect_to fixed_expense_index_url
     else
-      flash.now[:danger] = "Something wrong. Please retry."
+      flash.now[:alert] = "Something wrong. Please retry."
       render 'edit'
     end
   end
