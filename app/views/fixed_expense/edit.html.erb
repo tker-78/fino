@@ -1,8 +1,8 @@
 <div class="container">
   <h1>支出登録(固定費)</h1>
 
+<%= simple_form_for @fixed_expense do |f| %>
 <div class="container">
-  <%= simple_form_for @fixed_expense do |f| %>
     <%= f.input :pay_year %>
     <%= f.input :pay_month %>
 </div>
