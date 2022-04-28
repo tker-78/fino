@@ -2,17 +2,16 @@ class FixedExpenseController < ApplicationController
 
   def index
     @fixed_expenses = FixedExpense.all
-    @fixed_expense = FixedExpense.find_by(pay_month: 'Sat, 01 Jan 2022')
+    @list = {}
+    @fixed_expenses.each do |expense|
+      @list[expense.id] = expense.pay_day
+    end
   end
 
   def new
     @fixed_expense = FixedExpense.new
 
-    # if @fixed_expense = FixedExpense.find_by(pay_month: params[:fixed_expense])
-    #   @fixed_expense
-    # else
-    #   @fixed_expense = FixedExpense.create
-    # end
+
   end
 
   def create
