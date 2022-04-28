@@ -32,7 +32,6 @@ class FixedExpenseController < ApplicationController
   def update
     @fixed_expense = FixedExpense.find_by(id: params[:id])
 
-    @fixed_expense.reload
     if @fixed_expense.update(fixed_expense_params)
       flash[:success] = "Successfully updated."
       redirect_to fixed_expense_index_url
@@ -45,7 +44,7 @@ class FixedExpenseController < ApplicationController
 
   private
 
-  CATEGORIES = %i(house car insurance tax personal communication infra pay_month)
+  CATEGORIES = %i(house car insurance tax personal communication infra pay_year pay_month)
 
   def fixed_expense_params
     params.require(:fixed_expense).permit(CATEGORIES)
