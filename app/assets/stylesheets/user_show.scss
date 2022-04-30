@@ -1,0 +1,26 @@
+
+/* ページ上部 */
+
+.css-grid-user {
+  display: grid;
+  grid-template-columns: 1fr 1fr; 
+  grid-template-rows: 400px;
+  gap: 6px;
+  margin-bottom: 20px;
+  .grid-container {
+    padding: 10px;
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    background-color: #eee;
+  }
+}
+
+.balance {
+  height: 600px;
+  padding: 10px;
+  text-align: center;
+  font-size: 2rem;
+  border-radius: 10px;
+  background-color: #eee;
+}
