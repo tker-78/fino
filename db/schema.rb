@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_28_205747) do
+ActiveRecord::Schema[7.0].define(version: 2022_04_29_232942) do
   create_table "fixed_expenses", force: :cascade do |t|
     t.integer "house"
     t.integer "car"
@@ -35,6 +35,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_28_205747) do
     t.datetime "updated_at", null: false
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+
+  create_table "variable_expenses", force: :cascade do |t|
+    t.integer "food"
+    t.integer "car"
+    t.integer "trans"
+    t.integer "child"
+    t.integer "comodity"
+    t.integer "furniture"
+    t.integer "present"
+    t.integer "cash"
+    t.string "pay_year"
+    t.string "pay_month"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end
