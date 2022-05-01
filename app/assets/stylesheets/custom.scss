@@ -67,6 +67,18 @@ i {
   margin-top: 40px;
 }
 
+.top-flex {
+  display: flex;
+  flex-direction: row;
+  gap: 5px;
+}
+
+.top-flex-item {
+  background: #0bd;
+  border-radius: 5px;
+  padding: 10px;
+  font-size: 2rem;
+}
 
 /* devise */
 
