@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_04_29_232942) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_03_211404) do
   create_table "fixed_expenses", force: :cascade do |t|
     t.integer "house"
     t.integer "car"
@@ -23,6 +23,8 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_29_232942) do
     t.datetime "updated_at", null: false
     t.string "pay_month"
     t.string "pay_year"
+    t.integer "user_id", null: false
+    t.index ["user_id"], name: "index_fixed_expenses_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -52,4 +54,5 @@ ActiveRecord::Schema[7.0].define(version: 2022_04_29_232942) do
     t.datetime "updated_at", null: false
   end
 
+  add_foreign_key "fixed_expenses", "users"
 end
