@@ -13,5 +13,17 @@ class FixedExpense < ApplicationRecord
     end
   end
 
+  def total
+    total = 0
+    VALUES.each do |v|
+      unless self.send(v) == nil
+        total += self.send(v)
+      else
+        0
+      end
+    end
+    total
+  end
+
   VALUES = %i(house car insurance tax personal communication infra)
 end

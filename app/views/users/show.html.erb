@@ -3,8 +3,7 @@
   <div class="css-grid-user">
     <div class="grid-container">
       <p>Monthly Expense</p>
-      <p><%= @hash %></p>
-      <p><%= @fixed_expense.id %></p>
+      <p>Monthly Expense Total: <%= @fixed_expense.total %>円</p>
       <%= pie_chart(@hash)%>
     </div>
     <div class="grid-container">

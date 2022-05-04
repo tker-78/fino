@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   end
 
   def show
+    # @fixed_expense = current_user.fixed_expenses.first
     @fixed_expense = current_user.fixed_expenses.first
     @hash = {}
     
@@ -17,3 +18,4 @@ class UsersController < ApplicationController
   def edit
   end
 end
+
