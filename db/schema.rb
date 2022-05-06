@@ -23,7 +23,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_03_211404) do
     t.datetime "updated_at", null: false
     t.string "pay_month"
     t.string "pay_year"
-    t.integer "user_id", null: false
+    t.integer "user_id"
     t.index ["user_id"], name: "index_fixed_expenses_on_user_id"
   end
 

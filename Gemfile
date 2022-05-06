@@ -45,6 +45,7 @@ gem 'bootstrap-sass'
 gem 'devise'
 gem 'simple_form'
 gem 'chartkick'
+gem 'kaminari'
 
 # Use Sass to process CSS
 # gem "sassc-rails"

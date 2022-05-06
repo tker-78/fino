@@ -1,7 +1,7 @@
 class FixedExpenseController < ApplicationController
 
   def index
-    @fixed_expenses = FixedExpense.all
+    @fixed_expenses = current_user.fixed_expenses.all
     @list = {}
     @fixed_expenses.each do |expense|
       @list[expense.id] = expense.pay_day
@@ -9,13 +9,13 @@ class FixedExpenseController < ApplicationController
   end
 
   def new
-    @fixed_expense = FixedExpense.new
+    @fixed_expense = current_user.fixed_expenses.new
 
 
   end
 
   def create
-    @fixed_expense = FixedExpense.new(fixed_expense_params)
+    @fixed_expense = current_user.fixed_expenses.new(fixed_expense_params)
     if @fixed_expense.save
       flash[:notice] = "Successfully add data"
       redirect_to root_path 
@@ -26,11 +26,11 @@ class FixedExpenseController < ApplicationController
   end
 
   def edit
-    @fixed_expense = FixedExpense.find_by(id: params[:id])
+    @fixed_expense = current_user.fixed_expenses.find_by(id: params[:id])
   end
 
   def update
-    @fixed_expense = FixedExpense.find_by(id: params[:id])
+    @fixed_expense = current_user.fixed_expenses.find_by(id: params[:id])
 
     if @fixed_expense.update(fixed_expense_params)
       flash[:notice] = "Successfully updated."

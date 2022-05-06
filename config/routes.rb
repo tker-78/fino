@@ -4,6 +4,8 @@ Rails.application.routes.draw do
     # ログイン後のリダイレクトページを指定
     root 'staticpages#top' 
   end
+
+  get 'users/:id/:yyyymm', controller: 'users', action: 'show'
   
   resources :staticpages
   resources :users
