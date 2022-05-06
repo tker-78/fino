@@ -7,6 +7,9 @@ class FixedExpense < ApplicationRecord
 
   def pay_day
     begin
+      # if pay_month.slice(0,1) == "0"
+      #   pay_month = pay_month.split('').pop.to_s
+      # end
       pay_year + '-' + pay_month
     rescue 
       nil
