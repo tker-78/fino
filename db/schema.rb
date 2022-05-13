@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_03_211404) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_13_060809) do
   create_table "fixed_expenses", force: :cascade do |t|
     t.integer "house"
     t.integer "car"
@@ -52,7 +52,10 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_03_211404) do
     t.string "pay_month"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.index ["user_id"], name: "index_variable_expenses_on_user_id"
   end
 
   add_foreign_key "fixed_expenses", "users"
+  add_foreign_key "variable_expenses", "users"
 end

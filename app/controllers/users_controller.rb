@@ -15,7 +15,6 @@ class UsersController < ApplicationController
 
 
     @fixed_expense = current_user.fixed_expenses.find_by(pay_month: pay_month, pay_year: pay_year)
-    # @fixed_expense = current_user.fixed_expenses.first
     @hash = {}
     begin 
       FixedExpense::VALUES.each do |v|
@@ -24,10 +23,19 @@ class UsersController < ApplicationController
       @hash.compact!
     rescue NoMethodError
       flash[:alert] = "データ未作成"
-      redirect_to root_path
+      redirect_to fixed_expense_index_path
     end
 
-
+    @variable_expense = current_user.variable_expenses.find_by(pay_month: pay_month, pay_year: pay_year)
+    begin
+      VariableExpense::VALUES.each do |v|
+        @hash[v] = @variable_expense.send(v)
+      end
+      @hash.compact!
+    rescue
+      flash[:alert] = "データ未作成"
+      redirect_to variable_expense_index_path
+    end
   end
 
   def edit

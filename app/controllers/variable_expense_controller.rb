@@ -1,6 +1,6 @@
 class VariableExpenseController < ApplicationController
   def index
-    @variable_expense = VariableExpense.all
+    @variable_expense = current_user.variable_expenses.all
     @list = {}
     @variable_expense.each do |expense|
       @list[expense.id] = expense.pay_day
@@ -8,11 +8,11 @@ class VariableExpenseController < ApplicationController
   end
 
   def new
-    @variable_expense = VariableExpense.new
+    @variable_expense = current_user.variable_expenses.new
   end
 
   def create
-    @variable_expense = VariableExpense.new(variable_expense_params)
+    @variable_expense = current_user.variable_expenses.new(variable_expense_params)
     if @variable_expense.save
       flash[:notice] = "Successfully add date"
       redirect_to root_path
@@ -24,11 +24,11 @@ class VariableExpenseController < ApplicationController
   end
 
   def edit
-    @variable_expense = VariableExpense.find_by(id: params[:id])
+    @variable_expense = current_user.variable_expenses.find_by(id: params[:id])
   end
 
   def update
-    @variable_expense = VariableExpense.find_by(id: params[:id])
+    @variable_expense = current_user.variable_expenses.find_by(id: params[:id])
     if @variable_expense.save
       flash[:notice] = "Successfully updated."
       redirect_to variable_expense_index_url
