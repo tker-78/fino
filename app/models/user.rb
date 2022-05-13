@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   has_many :fixed_expenses
+  has_many :variable_expenses
 end
