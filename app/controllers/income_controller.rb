@@ -14,10 +14,10 @@ class IncomeController < ApplicationController
   end
 
   def create
-    @income = current_user.income.new(income_params)
+    @income = current_user.incomes.new(income_params)
 
     if @income.save
-      flash[:notice] "Successfully add data"
+      flash[:notice] = "Successfully add data"
       redirect_to root_path
     else
       flash[:notice] = "Something wrong"

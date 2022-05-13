@@ -1,2 +1,55 @@
-<h1>Income#edit</h1>
-<p>Find me in app/views/income/edit.html.erb</p>
+<div class="container">
+  <h1>収入編集</h1>
+
+<%= simple_form_for @income do |f| %>
+<div class="container">
+    <%= f.input :pay_year %>
+    <%= f.input :pay_month %>
+</div>
+
+
+  <div class="css-grid ">
+    <div class="grid-container">
+        <%= f.input :salary_t%>
+    </div>
+
+
+    <div class="grid-container">
+        <%= f.input :salary_s %>
+    </div>
+    <div class="grid-container">
+      <%= f.input :bonus_t %>
+    </div>
+
+    <div class="grid-container">
+      <%= f.input :bonus_s %>
+    </div>
+    
+    <div class="grid-container">
+      <%= f.input :cashback %>  
+    </div>
+    
+    <div class="grid-container">
+      <%= f.input :childcare_t %>
+    </div>
+
+    <div class="grid-container">
+      <%= f.input :childcare_s %>
+    </div>
+
+    <div class="grid-container">
+      <%= f.input :childsupport %>
+    </div>
+
+    <div class="grid-container">
+      <%= f.input :others %>
+    </div>
+
+  </div>
+
+  <div class="center">
+     <%= f.submit "Update income", class:"btn btn-submit_expense" %>
+    <% end %>
+  </div>
+
+</div>

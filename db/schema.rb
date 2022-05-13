@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_05_13_214738) do
+ActiveRecord::Schema[7.0].define(version: 2022_05_13_222810) do
   create_table "fixed_expenses", force: :cascade do |t|
     t.integer "house"
     t.integer "car"
@@ -33,7 +33,7 @@ ActiveRecord::Schema[7.0].define(version: 2022_05_13_214738) do
     t.integer "bonus_t"
     t.integer "bonus_s"
     t.integer "cashback"
-    t.integer "childcate_t"
+    t.integer "childcare_t"
     t.integer "childcare_s"
     t.integer "childsupport"
     t.integer "others"
