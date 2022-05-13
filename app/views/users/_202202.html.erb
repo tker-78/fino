@@ -1,0 +1,22 @@
+<div class ="container">
+  <p>ログインユーザーID: <%= current_user.id %></p>
+  <h2>2022年2月の概要</h2>
+  <div class="css-grid-user">
+    <div class="grid-container">
+      <p>Monthly Expense</p>
+      <p>Monthly Expense Total: <%= @fixed_expense.total %>円</p>
+      <%= pie_chart(@hash)%>
+    </div>
+    <div class="grid-container">
+      <p>Monthly Income</p>
+    </div>
+  </div>
+
+  <div class="container balance">
+    <p>Balance</p>
+  </div>
+
+
+
+
+</div>

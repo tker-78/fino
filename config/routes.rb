@@ -2,7 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   devise_scope :user do
     # ログイン後のリダイレクトページを指定
-    root 'staticpages#top' 
+    root 'users#index'
   end
 
   get 'users/:id/:yyyymm', controller: 'users', action: 'show'

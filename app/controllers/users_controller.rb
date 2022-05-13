@@ -17,12 +17,15 @@ class UsersController < ApplicationController
     @fixed_expense = current_user.fixed_expenses.find_by(pay_month: pay_month, pay_year: pay_year)
     # @fixed_expense = current_user.fixed_expenses.first
     @hash = {}
-    FixedExpense::VALUES.each do |v|
-      @hash[v] = @fixed_expense.send(v)
+    begin 
+      FixedExpense::VALUES.each do |v|
+        @hash[v] = @fixed_expense.send(v)
+      end
+      @hash.compact!
+    rescue NoMethodError
+      flash[:alert] = "データ未作成"
+      redirect_to root_path
     end
-    @hash.compact!
-    # showアクション内でのビューの切り替えのためのparamsの受け渡し
-    # render "users/#{params[:yyyymm]}", locals: {user: current_user }
 
 
   end
