@@ -32,7 +32,7 @@ class UsersController < ApplicationController
       @hash.compact!
 
       Income::VALUES.each do |v|
-        label = Income::NAMES.key(v)
+        label = Income::NAMES[v]
         @hash_income[label] = @income.send(v)
       end
       @hash_income.compact!

@@ -26,19 +26,33 @@ class Income < ApplicationRecord
     total
   end
 
+  # NAMES = {
+  # '拓也給与'       =>     :salary_t,    
+  # 'さくら給与'     =>     :salary_s,    
+  # '拓也賞与'       =>     :bonus_t,     
+  # 'さくら賞与'      =>     :bonus_s,     
+  # 'キャッシュバック'  =>     :cashback,    
+  # '拓也育休手当'     =>     :childcare_t, 
+  # 'さくら育休手当'   =>     :childcare_s, 
+  # '育児手当'        =>     :childsupport,
+  # 'その他'         =>     :others      
+  # }.freeze
+
+
+
   NAMES = {
+    :salary_t =>      '拓也給与', 
+    :salary_s =>      'さくら給与',   
+    :bonus_t =>       '拓也賞与',  
+    :bonus_s =>       'さくら賞与' ,  
+    :cashback =>      'キャッシュバック',
+    :childcare_t =>   '拓也育休手当',
+    :childcare_s =>   'さくら育休手当', 
+    :childsupport =>  '育児手当',
+    :others =>        'その他'     
+    }.freeze
 
-  '拓也給与'       =>     :salary_t,    
-  'さくら給与'     =>     :salary_s,    
-  '拓也賞与'       =>     :bonus_t,     
-  'さくら賞与'      =>     :bonus_s,     
-  'キャッシュバック'  =>     :cashback,    
-  '拓也育休手当'     =>     :childcare_t, 
-  'さくら育休手当'   =>     :childcare_s, 
-  '育児手当'        =>     :childsupport,
-  'その他'         =>     :others      
 
-  }.freeze
 
   VALUES = %i(salary_t salary_s bonus_t bonus_s cashback childcare_t childcare_s childsupport others)
 
