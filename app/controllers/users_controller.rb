@@ -32,14 +32,15 @@ class UsersController < ApplicationController
       @hash.compact!
 
       Income::VALUES.each do |v|
-        @hash_income[v] = @income.send(v)
+        label = Income::NAMES.key(v)
+        @hash_income[label] = @income.send(v)
       end
       @hash_income.compact!
 
 
-    rescue NoMethodError
-      flash[:alert] = "データ未作成"
-      redirect_to fixed_expense_index_path
+    # rescue NoMethodError
+    #   flash[:alert] = "データ未作成"
+    #   redirect_to fixed_expense_index_path
     end
 
   end
