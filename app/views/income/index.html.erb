@@ -1,0 +1,102 @@
+<div class="container">
+  <h1>収入一覧</h1>
+
+  <h2>2022</h2>
+  <div class="css-grid-month">
+    <div class="grid-container">
+    <% if @list.has_value?("2022-1") %>
+      <p><%= link_to "1月", edit_income_path(id: @list.key("2022-1")) %></p>
+    <% else %>
+      <p><%= link_to "1月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-2") %>
+      <p><%= link_to "2月", edit_income_path(id: @list.key("2022-2")) %></p>
+    <% else %>
+      <p><%= link_to "2月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-3") %>
+      <p><%= link_to "3月", edit_income_path(id: @list.key("2022-3")) %></p>
+    <% else %>
+      <p><%= link_to "3月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-4") %>
+      <p><%= link_to "4月", edit_income_path(id: @list.key("2022-4")) %></p>
+    <% else %>
+      <p><%= link_to "4月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-5") %>
+      <p><%= link_to "5月", edit_income_path(id: @list.key("2022-5")) %></p>
+    <% else %>
+      <p><%= link_to "5月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-6") %>
+      <p><%= link_to "6月", edit_income_path(id: @list.key("2022-6")) %></p>
+    <% else %>
+      <p><%= link_to "6月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-7") %>
+      <p><%= link_to "7月", edit_income_path(id: @list.key("2022-7")) %></p>
+    <% else %>
+      <p><%= link_to "7月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-8") %>
+      <p><%= link_to "8月", edit_income_path(id: @list.key("2022-8")) %></p>
+    <% else %>
+      <p><%= link_to "8月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-9") %>
+      <p><%= link_to "9月", edit_income_path(id: @list.key("2022-9")) %></p>
+    <% else %>
+      <p><%= link_to "9月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-10") %>
+      <p><%= link_to "10月", edit_income_path(id: @list.key("2022-10")) %></p>
+    <% else %>
+      <p><%= link_to "10月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-11") %>
+      <p><%= link_to "11月", edit_income_path(id: @list.key("2022-11")) %></p>
+    <% else %>
+      <p><%= link_to "11月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+    <div class="grid-container">
+    <% if @list.has_value?("2022-12") %>
+      <p><%= link_to "12月", edit_income_path(id: @list.key("2022-12")) %></p>
+    <% else %>
+      <p><%= link_to "12月", new_income_path %></p>  
+    <% end %>
+    </div>
+
+</div>

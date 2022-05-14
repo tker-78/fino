@@ -1,6 +1,6 @@
 <div class ="container">
   <p>ログインユーザーID: <%= current_user.id %></p>
-  <h2>2022年1月の概要</h2>
+  <h2>2022年6月の概要</h2>
   <div class="css-grid-user">
     <div class="grid-container">
       <p>Monthly Expense</p>
@@ -9,6 +9,8 @@
     </div>
     <div class="grid-container">
       <p>Monthly Income</p>
+      <p>Monthly Income Total: <%= @income.total %>円</p>
+      <%= pie_chart(@hash_income)%>
     </div>
   </div>
 

@@ -89,6 +89,16 @@
   - 電気
   - ガス
 
+## 収入Incomeモデル
+- 拓也給与 salary_t
+- さくら給与 salary_s
+- 拓也賞与 bonus_t
+- さくら賞与 bonus_s
+- キャッシュバック cashback
+- 育休手当 childcare_t, childcare_s 
+- 児童手当 childsupport
+- その他手当 others
+
 
 ## Userモデル
 

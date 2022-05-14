@@ -14,9 +14,14 @@ class UsersController < ApplicationController
     end
 
 
+    # 支出のグラフ表示
     @fixed_expense = current_user.fixed_expenses.find_by(pay_month: pay_month, pay_year: pay_year)
     @variable_expense = current_user.variable_expenses.find_by(pay_month: pay_month, pay_year: pay_year)
+    @income = current_user.incomes.find_by(pay_month: pay_month, pay_year: pay_year)
+
     @hash = {}
+    @hash_income = {}
+
     begin 
       FixedExpense::VALUES.each do |v|
         @hash[v] = @fixed_expense.send(v)
@@ -25,10 +30,18 @@ class UsersController < ApplicationController
         @hash[v] = @variable_expense.send(v)
       end      
       @hash.compact!
+
+      Income::VALUES.each do |v|
+        @hash_income[v] = @income.send(v)
+      end
+      @hash_income.compact!
+
+
     rescue NoMethodError
       flash[:alert] = "データ未作成"
       redirect_to fixed_expense_index_path
     end
+
   end
 
   def edit

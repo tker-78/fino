@@ -9,6 +9,8 @@
     </div>
     <div class="grid-container">
       <p>Monthly Income</p>
+      <p>Monthly Income Total: <%= @income.total %>円</p>
+      <%= pie_chart(@hash_income)%>
     </div>
   </div>
 
