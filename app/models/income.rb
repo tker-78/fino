@@ -26,6 +26,6 @@ class Income < ApplicationRecord
     total
   end
 
-  VALUES = %i(salary_t salary_s bonus_t bonus_s cashback childcate_t childcare_s childsupport others)
+  VALUES = %i(salary_t salary_s bonus_t bonus_s cashback childcare_t childcare_s childsupport others)
 
 end
